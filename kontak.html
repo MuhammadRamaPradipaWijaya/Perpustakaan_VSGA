@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Website Perpustakaan</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         * {
             font-family: 'PT Sans', sans-serif;
@@ -23,6 +23,29 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+        }
+
+        .icon-circle {
+            border: 2px solid #000;
+            padding: 12px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+        }
+    
+        .text-muted {
+            color: #515151;
+        }
+    
+        .ml-2 {
+            margin-left: 10px;
+        }
+    
+        .mb-3 {
+            margin-bottom: 1rem;
         }
     </style>
 
@@ -58,16 +81,64 @@
     <div class="mytitle">
         <h1>Kontak Kami</h1>
     </div>
-    <div style="padding: 50px;">
-        <h3>Hubungi Kami</h3><hr>
-        <p><strong>Email:</strong> admin@perpustakaan.com</p>
-        <p><strong>Telepon:</strong> +62 812-3456-7890</p>
-        <p><strong>Media Sosial:</strong></p>
-        <ul>
-            <li><a href="https://facebook.com/perpustakaan" target="_blank">Facebook</a></li>
-            <li><a href="https://twitter.com/perpustakaan" target="_blank">Twitter</a></li>
-            <li><a href="https://instagram.com/perpustakaan" target="_blank">Instagram</a></li>
-        </ul>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9"></div>
+                <div class="row w-100">
+                    <div class="col-lg-6 my-4">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.424154373016!2d113.72049837427969!3d-8.159949781753275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd695b617d8f623%3A0xf6c4437632474338!2sState%20Polytechnic%20of%20Jember!5e0!3m2!1sen!2sid!4v1721093766885!5m2!1sen!2sid"
+                            class="w-100" height="400" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="col-lg-6 my-4 d-flex align-items-center">
+                        <ul class="social-icons list-unstyled">
+                            <li class="mb-3">
+                                <a href="" class="d-flex align-items-start">
+                                    <span class="icon-circle">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </span>
+                                    <div class="ml-2 text-muted">
+                                        Jl. Mastrip, Kabupaten Jember, Jawa Timur
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="" class="d-flex align-items-start">
+                                    <span class="icon-circle">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </span>
+                                    <div class="ml-2 text-muted">
+                                        0823-3464-2717
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="" class="d-flex align-items-start">
+                                    <span class="icon-circle">
+                                        <i class="fab fa-instagram"></i>
+                                    </span>
+                                    <div class="ml-2 text-muted">
+                                        perpustakaan_buku
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="" class="d-flex align-items-start">
+                                    <span class="icon-circle">
+                                        <i class="fab fa-tiktok"></i>
+                                    </span>
+                                    <div class="ml-2 text-muted">
+                                        @perpustakaan_buku
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="js/bootstrap.min.js"></script>
 </body>
