@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>Website Perpustakaan</title>
+    <title>Perpustakaan || Kontak</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
     <style>
         * {
             font-family: 'PT Sans', sans-serif;
+        }
+
+        body {
+            background-color: #f5f2f2;
         }
 
         .mytitle {
@@ -27,7 +32,7 @@
 
         .icon-circle {
             border: 2px solid #000;
-            padding: 12px;
+            padding: 20px;
             border-radius: 50%;
             display: inline-flex;
             align-items: center;
@@ -52,7 +57,7 @@
 </head>
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">PERPUSTAKAAN</a>
+    <img src="./img/book.gif" width="40" height="40" class="d-inline-block align-top rounded-circle" alt="Logo Perpustakaan">Perpustakaan</img>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
             aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -60,18 +65,31 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Beranda</a>
+                    <a class="nav-link active" aria-current="page" href="index.php">Beranda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="koleksi.html">Koleksi</a>
+                    <a class="nav-link active" href="koleksi.php">Koleksi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="kontak.html">Kontak</a>
+                    <a class="nav-link active" href="kontak.php">Kontak</a>
                 </li>
-                <li class="nav-item">
-                    <button type="button" class="btn btn-square btn-danger"> Masuk
-                    </button>
-                </li>
+
+                <?php
+                session_start();
+                
+                if (isset($_SESSION['email'])) {
+                    echo '
+                    <li class="nav-item">
+                        <a class="btn btn-square btn-danger" href="logout.php">Keluar</a>
+                    </li>';
+                } else {
+                    echo '
+                    <li class="nav-item">
+                        <a href="login.php" class="btn btn-square btn-danger">Masuk</a>
+                    </li>';
+                }
+                ?>
+                
             </ul>
         </div>
     </div>
@@ -79,25 +97,23 @@
 
 <body><br><br>
     <div class="mytitle">
-        <h1>Kontak Kami</h1>
+        <h1 style="text-shadow: 2px 2px 0 white, -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white; color: black;">Kontak Kami</h1>
     </div>
+
     <div>
         <div class="container">
             <div class="row">
                 <div class="col-md-9"></div>
                 <div class="row w-100">
                     <div class="col-lg-6 my-4">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.424154373016!2d113.72049837427969!3d-8.159949781753275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd695b617d8f623%3A0xf6c4437632474338!2sState%20Polytechnic%20of%20Jember!5e0!3m2!1sen!2sid!4v1721093766885!5m2!1sen!2sid"
-                            class="w-100" height="400" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.424154373016!2d113.72049837427969!3d-8.159949781753275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd695b617d8f623%3A0xf6c4437632474338!2sState%20Polytechnic%20of%20Jember!5e0!3m2!1sen!2sid!4v1721093766885!5m2!1sen!2sid" class="w-100" height="400" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="col-lg-6 my-4 d-flex align-items-center">
                         <ul class="social-icons list-unstyled">
                             <li class="mb-3">
-                                <a href="" class="d-flex align-items-start">
+                                <a href="#" class="d-flex align-items-start text-decoration-none">
                                     <span class="icon-circle">
-                                        <i class="fas fa-map-marker-alt"></i>
+                                        <i class="fas fa-map-marker-alt" style="color: red;"></i>
                                     </span>
                                     <div class="ml-2 text-muted">
                                         Jl. Mastrip, Kabupaten Jember, Jawa Timur
@@ -105,19 +121,19 @@
                                 </a>
                             </li>
                             <li class="mb-3">
-                                <a href="" class="d-flex align-items-start">
+                                <a href="#" class="d-flex align-items-start text-decoration-none">
                                     <span class="icon-circle">
-                                        <i class="fab fa-whatsapp"></i>
+                                        <i class="fab fa-whatsapp" style="color: red;"></i>
                                     </span>
                                     <div class="ml-2 text-muted">
-                                        0823-3464-2717
+                                        (021) 123-4567
                                     </div>
                                 </a>
                             </li>
                             <li class="mb-3">
-                                <a href="" class="d-flex align-items-start">
+                                <a href="#" class="d-flex align-items-start text-decoration-none">
                                     <span class="icon-circle">
-                                        <i class="fab fa-instagram"></i>
+                                        <i class="fab fa-instagram" style="color: red;"></i>
                                     </span>
                                     <div class="ml-2 text-muted">
                                         perpustakaan_buku
@@ -125,9 +141,9 @@
                                 </a>
                             </li>
                             <li class="mb-3">
-                                <a href="" class="d-flex align-items-start">
+                                <a href="#" class="d-flex align-items-start text-decoration-none">
                                     <span class="icon-circle">
-                                        <i class="fab fa-tiktok"></i>
+                                        <i class="fab fa-tiktok" style="color: red;"></i>
                                     </span>
                                     <div class="ml-2 text-muted">
                                         @perpustakaan_buku
@@ -140,6 +156,7 @@
             </div>
         </div>
     </div>
+
     <script src="js/bootstrap.min.js"></script>
 </body>
 
@@ -156,7 +173,7 @@
             </div>
         </div>
         <div class="mt-3">
-            <p>&copy; 2024 Perpustakaan Digital. All rights reserved.</p>
+            <p>&copy; 2024 Perpustakaan. All rights reserved.</p>
         </div>
     </div>
 </footer>
